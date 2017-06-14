@@ -1,0 +1,267 @@
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="health1.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="angular.min.js"></script>
+
+<script type="text/javascript" src="fusioncharts.js"></script>
+
+<script type="text/javascript" src="angular-fusioncharts.min.js"></script>
+
+<script type="text/javascript" src="fusioncharts.charts.js"></script>
+<head>
+<style>
+
+body
+{
+background-color:#cccccc;
+}
+</style>
+</head>
+
+
+
+
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" class="mainBody">
+
+
+  
+
+<div class="w3-content w3-margin-top" >
+
+  
+  <div class="w3-row-padding">
+  
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4" style="width:330%;">
+
+
+    <div class="floatLeft a">
+
+      <button type="button" class="btn btn-info">
+       <span class="glyphicon glyphicon-arrow-left"></span>
+    </button>
+
+    </div>
+
+
+                <div class="floatRight b">
+           <button type="button" class="btn btn-info">
+         <span class="glyphicon glyphicon-th"></span>
+             </button></div>
+                                
+                
+
+
+<div class="set">
+<p>June 4 2015</p>
+<p><span style="font-weight:bold"><span style="font-size:1.5em";>54.7 kg</p>
+<p>Body weight</p>
+</div>
+
+
+<div class="graph">
+ <div fusioncharts width="325"  height="320"
+
+                                   type="area2d"
+
+                                   dataSource="{{myDataSource}}" >
+
+                                </div>
+
+
+                                <div class="showInsideGraph">
+
+                                                <div class="floatLeft">
+
+                                                                <p>Feb 5 2015</p>
+
+                                                                <p><span style="font-weight:bold"><span style="font-size:1.5em";>57.5 Kg</p>
+
+                                                                <p>Max Weight</p>
+
+                                                </div>
+
+                                               
+
+                                                <div class="floatRight">
+
+                                                                <p>July 14 2015</p>
+
+                                                                <p><span style="font-weight:bold"><span style="font-size:1.5em";>53.5 Kg</p>
+
+                                                                <p>Min Weight</p>
+
+                                 </div>                                               </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+                                var app = angular.module("myApp", ["ng-fusioncharts"]);
+
+                               
+
+                                app.controller('myCtrl', function ($scope) {
+
+              $scope.myDataSource = {
+
+                chart: {
+
+                    "caption": "",
+
+                                                                                "subCaption": " ",
+
+                                                                                "xAxisName": "Month",
+
+                                                                                "yAxisName": "Weight",
+
+                                                                                "numberPrefix": " ",
+
+                                                                                "paletteColors": "#5cc8ec",
+
+                                                                                "bgColor": "#ffffff",
+
+                                                                                "showBorder": "0",
+
+                                                                                "showCanvasBorder": "0",
+
+                                                                                "plotBorderAlpha": "15",
+
+                                                                                "usePlotGradientColor": "0",
+
+                                                                                "plotFillAlpha": "50",
+
+                                                                                "showYAxisValues": "0",
+
+                                                                                "showXAxisLine": "0",
+
+                                                                                "axisLineAlpha": "25",
+
+                                                                                "divLineAlpha": "5",
+
+                                                                                "showValues": "0",
+
+                                                                                "showAlternateHGridColor": "0",
+
+                                                                                "captionFontSize": "10",
+
+                                                                                "subcaptionFontSize": "24",
+
+                                                                                "subcaptionFontBold": "0",
+
+                                                                                "toolTipColor": "#ffffff",
+
+                                                                                "toolTipBorderThickness": "0",
+
+                                                                                "toolTipBgColor": "#000000",
+
+                                                                                "toolTipBgAlpha": "80",
+
+                                                                                "toolTipBorderRadius": "2",
+
+                                                                                "toolTipPadding": "5"
+
+                },
+
+                data:[{
+
+                    label: "Feb",
+
+                    value: "60"
+
+                },
+
+                {
+
+                    label: "Mar",
+
+                    value: "54"
+
+                },
+
+                {
+
+                    label: "Apr",
+
+                    value: "55.5"
+
+                },
+
+                {
+
+                    label: "May",
+
+                    value: "53"
+
+                },
+
+                {
+
+                    label: "June",
+
+                    value: "54.7kg"
+
+                },
+
+                                                                {
+
+                    label: "July",
+
+                    value: "53.4"
+
+                }
+
+                ]
+
+              };
+
+            });
+
+                </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+ 
